@@ -290,8 +290,8 @@
 			   </div>
 			<ul>
 				<li>
-					<label for="x">Enter a number:</label>
-					<input type="text" id="x">
+					<label for="x1">Enter a number:</label>
+					<input type="text" id="x1">
 					<br><br>
 					<button onclick="FindFac()">Find factors</button>
 					<p id="p1"></p>
@@ -299,7 +299,7 @@
 						function FindFac() 
 						{
 							document.getElementById("p1").innerHTML=null
-							var x=document.getElementById("x").value
+							var x=document.getElementById("x1").value
 							for (i=1; i<=x; i++)
 							{
 								if (x%i==0)
@@ -311,8 +311,8 @@
 					</script>
 				</li>
 				<li>
-					<label for="x">Enter a range:</label>
-					<input type="text" id="x"> to <input type="text" id="y">
+					<label for="x2">Enter a range:</label>
+					<input type="text" id="x2"> to <input type="text" id="y">
 				     	<br><br>
 					<button onclick="Find()">Find</button>
 					<p id="p2"></p>
@@ -320,7 +320,7 @@
 						function Find()
 						{
 					       		document.getElementById("p2").innerHTML=null
-							var small=document.getElementById("x").value
+							var small=document.getElementById("x2").value
 					       		var big=document.getElementById("y").value
 							for (i=small; i<=big; i++)
 							{
