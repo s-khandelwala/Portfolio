@@ -285,7 +285,7 @@
              <div id="contact" class="box-shadow-full">
 			<div class="title-box-2 pt-4 pt-md-0">
 				<h5 class="title-left">
-				  Where I've been to
+				  Javascript Projects
 				</h5>
 			   </div>
 			<ul>
@@ -294,17 +294,17 @@
 					<input type="text" id="x">
 					<br><br>
 					<button onclick="FindFac()">Find factors</button>
-					<p id="p"></p>
+					<p id="p1"></p>
 					<script>
 						function FindFac() 
 						{
-							document.getElementById("p").innerHTML=null
+							document.getElementById("p1").innerHTML=null
 							var x=document.getElementById("x").value
 							for (i=1; i<=x; i++)
 							{
 								if (x%i==0)
 								{
-									document.getElementById("p").innerHTML+=i+"<br>"+"<br>"
+									document.getElementById("p1").innerHTML+=i+"<br>"+"<br>"
 								}
 							}
 						}
@@ -315,11 +315,11 @@
 					<input type="text" id="x"> to <input type="text" id="y">
 				     	<br><br>
 					<button onclick="Find()">Find</button>
-					<p id="p"></p>
+					<p id="p2"></p>
 					<script>
 						function Find()
 						{
-					       document.getElementById("p").innerHTML=null
+					       document.getElementById("p2").innerHTML=null
 							var small=document.getElementById("x").value
 					       var big=document.getElementById("y").value
 							for (i=small; i<=big; i++)
@@ -334,7 +334,7 @@
 								}
 								if (fact==0)
 								{
-									document.getElementById("p").innerHTML+=i+"<br>"+"<br>"
+									document.getElementById("p2").innerHTML+=i+"<br>"+"<br>"
 								}
 							}
 						}
@@ -345,11 +345,11 @@
 					<input type="text" id="input">
 					<br><br>
 					<button onclick="Fib()">Show sequence</button>
-					<p id="p"></p>
+					<p id="p3"></p>
 					<script>
 						function Fib()
 						{
-					       document.getElementById("p").innerHTML=null //clearing the screen
+					       document.getElementById("p3").innerHTML=null //clearing the screen
 							// setting variables
 							var fib1=0 // the lower fibonacci number
 							var fib2=1 // the higher fibonacci number
@@ -357,7 +357,7 @@
 							for (i=1; i<=count; i++)
 							{
 								// printing the fibonacci number                    
-								document.getElementById("p").innerHTML+=fib1+"<br>"+"<br>"
+								document.getElementById("p3").innerHTML+=fib1+"<br>"+"<br>"
 								// using the fibonacci formula if iterator "i" is less than the user's input
 								if (i<count)
 								{
