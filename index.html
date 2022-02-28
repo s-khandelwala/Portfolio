@@ -311,52 +311,63 @@
 					</script>
 				</li>
 				<li>
-					<p>India</p>
-					<img src="India.jfif">
+					<label for="x">Enter a range:</label>
+					<input type="text" id="x"> to <input type="text" id="y">
+				     	<br><br>
+					<button onclick="Find()">Find</button>
+					<p id="p"></p>
+					<script>
+						function Find()
+						{
+					       document.getElementById("p").innerHTML=null
+							var small=document.getElementById("x").value
+					       var big=document.getElementById("y").value
+							for (i=small; i<=big; i++)
+							{
+						    fact=0
+								for (y=2; y<=i/2; y++)
+								{
+									if (i%y==0 && i!=2)
+									{
+										fact+=1
+									}
+								}
+								if (fact==0)
+								{
+									document.getElementById("p").innerHTML+=i+"<br>"+"<br>"
+								}
+							}
+						}
+					</script>
 				</li>
 				<li>
-					<p>Hawaii</p>
-					<img src="Hawaii.jfif">
-				</li>
-				<li>
-					<p>Canada</p>
-					<img src="Canada.jfif">
-				</li>
-				<li>
-					<p>Paris</p>
-					<img src="Paris.jfif">
-				</li>
-				<li>
-					<p>London</p>
-					<img src="London.jfif">
-				</li>
-				<li>
-					<p>Florida</p>
-					<img src="Florida.jpg">
-				</li>
-				<li>
-					<p>Oregon</p>
-					<img src="Oregon.jfif">
-				</li>
-				<li>
-					<p>California</p>
-					<img src="California.jfif">
-				</li>
-				<li>
-					<p>Frankfurt</p>
-					<img src="Frankfurt.jfif">
-				</li>
-				<li>
-					<p>North Carolina</p>
-					<img src="North Carolina.jfif">
-				</li>
-				<li>
-					<p>Texas</p>
-					<img src="Texas.jfif">
-				</li>
-                    <li>
-					<p>Alaska</p>
-					<img src="Alaska.jpg">
+					<label for="input">Range:</label>
+					<input type="text" id="input">
+					<br><br>
+					<button onclick="Fib()">Show sequence</button>
+					<p id="p"></p>
+					<script>
+						function Fib()
+						{
+					       document.getElementById("p").innerHTML=null //clearing the screen
+							// setting variables
+							var fib1=0 // the lower fibonacci number
+							var fib2=1 // the higher fibonacci number
+							var count=document.getElementById("input").value //user input
+							for (i=1; i<=count; i++)
+							{
+								// printing the fibonacci number                    
+								document.getElementById("p").innerHTML+=fib1+"<br>"+"<br>"
+								// using the fibonacci formula if iterator "i" is less than the user's input
+								if (i<count)
+								{
+									var Prevfib2=fib2 //saving higher fibonacci number
+									fib2+=fib1 //adding lower fibonacci number to higher one
+									fib1=Prevfib2 //setting lower fibonacci number to the orignal higher one
+								}
+							}
+						}
+					</script>
 				</li>
 			</ul>
                </div>
