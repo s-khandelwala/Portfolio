@@ -514,6 +514,22 @@
 						}
 					</script>
 				</li>
+				<li>
+					<h1>Sum of first n natural numbers</h1>
+					<label for="n">Enter a number:</label>
+					<input type="number" id="n">
+					<button onclick="Sum(document.getElementById('n').value)">Click Me!</button>
+					<br><br>
+					<p id="p"></p>
+					<script>
+						function Sum(x=parseInt) 
+						{
+							n=parseInt(x);
+							var sum=(n+1)*n/2;
+							document.getElementById("p").innerHTML="Sum of numbers from "+" 1 to "+n+": "+sum
+						}
+					</script>
+				</li>
 			</ul>
                </div>
              </div>
