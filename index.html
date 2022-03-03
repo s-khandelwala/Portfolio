@@ -520,13 +520,13 @@
 					<input type="number" id="n">
 					<button onclick="Sum(document.getElementById('n').value)">Click Me!</button>
 					<br><br>
-					<p id="p"></p>
+					<p id="para"></p>
 					<script>
-						function Sum(x=parseInt) 
+						function Sum(user_input=parseInt) 
 						{
-							n=parseInt(x);
-							var sum=(n+1)*n/2;
-							document.getElementById("p").innerHTML="Sum of numbers from "+" 1 to "+n+": "+sum
+							var user_input=parseInt(x);
+							var sum=(user_input+1)*user_input/2;
+							document.getElementById("para").innerHTML="Sum of numbers from "+" 1 to "+n+": "+sum
 						}
 					</script>
 				</li>
