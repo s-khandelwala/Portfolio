@@ -451,13 +451,17 @@
 					<script>
 						function Check()
 						{
-							z=false
 							var l=document.getElementById("n").value
+							z=false
+							if (l==1)
+							{
+								z=true
+							}
 							if (l!=2)
 							{	
-								for (a=2; a<=l; a++)
+								for (a=2; a<l; a++)
 								{
-								     if (l%a==0)+(l!=a)
+								     if (l%a==0)
 								     {
 									document.getElementById("p").innerHTML=l+" is not prime."
 									z=true
