@@ -442,6 +442,36 @@
 								}
 						</script>
 				</li>
+				<li>
+					<h1>Checking if a number is prime or not</h1>
+					<label for="n">Enter a number: </label>
+					<input type="text" id="n">
+					<button onclick="Check()">Check</button>
+					<p id="p"></p>
+					<script>
+						function Check()
+						{
+							z=false
+							var x=document.getElementById("n").value
+							if (x!=2)
+							{	
+								for (a=2; a<=x; a++)
+								{
+								     if (x%a==0)+(x!=a)
+								     {
+									document.getElementById("p").innerHTML=x+" is not prime."
+									z=true
+									break
+								     }
+								}
+							}
+							if (z==false)
+							{
+								document.getElementById("p").innerHTML=x+" is prime."
+							}
+						}
+					</script>
+				</li>	
 			</ul>
                </div>
              </div>
