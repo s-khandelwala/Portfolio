@@ -375,6 +375,73 @@
 						}
 					</script>
 				</li>
+				<li>
+						<h1>Converting temperature</h1>
+						<label>Choose which way to convert:</label>
+						<select id="Consel" onchange="Txt_Chnge()">
+							<option value="blank"></option>
+							<option value="Far">Fahrenheit to Celsius</option>
+							<option value="Cel">Celsius to Fahrenheit</option>
+						</select>
+						<br><br>
+						<label id="label1" for="original"></label>
+						<input type="text" id="original">
+						<br><br>
+						<button onclick="Convert()">Convert</button>
+						<br><br>
+						<label id="label2" for="answer"></label>
+						<input type="text" id="answer" disabled>
+						<script>
+							  function Txt_Chnge() 
+							  {
+							       var x=document.getElementById("Consel").value
+							       if (x=="Far") 
+							       {
+								    document.getElementById("label1").innerHTML="Fahrenheit:";
+								    document.getElementById("label2").innerHTML="Celsius:";
+								    document.getElementById("answer").value="";
+								    document.getElementById("original").value=""
+							       } 
+							       else if (x=="Cel")
+							       {
+								    document.getElementById("label1").innerHTML="Celsius:";
+								    document.getElementById("label2").innerHTML="Fahrenheit:";
+								    document.getElementById("answer").value="";
+								    document.getElementById("original").value=""
+							       }
+							       else
+							       {
+								    document.getElementById("label1").innerHTML="";
+								    document.getElementById("label2").innerHTML="";
+								    document.getElementById("answer").value="";
+								    document.getElementById("original").value=""
+							       }
+							  }
+								function Convert()
+								{
+									var x=parseFloat(document.getElementById("original").value);
+									var way=document.getElementById("Consel").value;
+									if (way=="Far")
+									{
+										var ans=(x-32)*5/9
+										document.getElementById("answer").value=ans
+									} 
+									else if (way=="Cel")
+									{
+										var ans=(x*9/5)+32
+										document.getElementById("answer").value=ans
+									}
+									else
+									{
+										alert("Please choose something other than the blank choice, please.")
+									};
+									if (document.getElementById("answer").value=="NaN")
+									{
+										document.getElementById("answer").value=""
+									}
+								}
+						</script>
+				</li>
 			</ul>
                </div>
              </div>
