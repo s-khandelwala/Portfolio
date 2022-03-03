@@ -475,7 +475,45 @@
 							}
 						}
 					</script>
-				</li>	
+				</li>
+				<li>
+					<h1>Checking for leap year</h1>
+					<label for="year">Enter a year:</label>
+					<input type="text" id="year">
+					<br><br>
+					<button onclick="Check()">Check</button>
+					<br><br>
+					<label for="answer">Answer:</label>
+					<input type="text" id="answer" disabled>
+					<script>
+						function Check()
+						{
+							year=document.getElementById("year").value;
+							if (year%4==0)
+							{
+								if (year%100==0)
+									{
+										if (year%400==0)
+										{
+											document.getElementById("answer").value="Leap Year"
+										}
+										else
+										{
+											document.getElementById("answer").value=" Not a Leap Year"
+										}
+									}
+								else
+								{
+									document.getElementById("answer").value="Leap Year"
+								}
+							}
+							else
+							{
+								document.getElementById("answer").value=" Not a Leap Year"
+			}
+						}
+					</script>
+				</li>
 			</ul>
                </div>
              </div>
