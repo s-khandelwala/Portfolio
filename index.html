@@ -530,6 +530,36 @@
 						}
 					</script>
 				</li>
+				<li>
+					<h1 style="color: chocolate;">Multiplacation table up to 30</h1>
+					<label for="num" style="color: whitesmoke; font-size: large; background-color: darkcyan;">Enter a number (Don't enter a decimal or the system will round down):</label>
+					<input type="number" style="color: darkturquoise;" id="num">
+					<br><br>
+					<button onclick="MulTab()">Click Me!</button>
+					<p id="pa" style="color:#008b8b;"></p>
+					<button onclick="Delete()" id="Delete" disabled>Delete All</button>
+					<script>
+							function MulTab() 
+							{
+								document.getElementById("pa").innerHTML=null
+								var x=parseInt(document.getElementById("num").value);
+								document.getElementById("num").value=x;
+								for (var a=1; a<=30; a++)
+								{
+									var mul=x+" multiplied by "+a+" equals "+x*a+"."
+									document.getElementById("pa").innerHTML+=mul+"<br>"
+								}
+								document.getElementById("Delete").disabled=false
+							}
+							function Delete() 
+							{
+								document.getElementById("pa").innerHTML=null;
+								document.getElementById("num").value=null;
+								x=null;
+								document.getElementById("Delete").disabled=true
+							}
+					</script>
+				</li>
 			</ul>
                </div>
              </div>
