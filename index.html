@@ -483,8 +483,8 @@
 					<br><br>
 					<button onclick="Check()">Check</button>
 					<br><br>
-					<label for="answer">Answer:</label>
-					<input type="text" id="answer" disabled>
+					<label for="answer2">Answer:</label>
+					<input type="text" id="answer2" disabled>
 					<script>
 						function Check()
 						{
@@ -495,21 +495,21 @@
 									{
 										if (year%400==0)
 										{
-											document.getElementById("answer").value="Leap Year"
+											document.getElementById("answer2").value="Leap Year"
 										}
 										else
 										{
-											document.getElementById("answer").value=" Not a Leap Year"
+											document.getElementById("answer2").value=" Not a Leap Year"
 										}
 									}
 								else
 								{
-									document.getElementById("answer").value="Leap Year"
+									document.getElementById("answer2").value="Leap Year"
 								}
 							}
 							else
 							{
-								document.getElementById("answer").value=" Not a Leap Year"
+								document.getElementById("answer2").value=" Not a Leap Year"
 			}
 						}
 					</script>
