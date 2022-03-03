@@ -517,14 +517,14 @@
 				<li>
 					<h1>Sum of first n natural numbers</h1>
 					<label for="n">Enter a number:</label>
-					<input type="number" id="n">
-					<button onclick="Sum(document.getElementById('n').value)">Click Me!</button>
+					<input type="number" id="inp">
+					<button onclick="Sum(document.getElementById('inp').value)">Click Me!</button>
 					<br><br>
 					<p id="para"></p>
 					<script>
 						function Sum(user_input=parseInt) 
 						{
-// 							var user_input=parseInt(x);
+							var user_input=parseInt(user_input);
 							var sum=(user_input+1)*user_input/2;
 							document.getElementById("para").innerHTML="Sum of numbers from "+" 1 to "+user_input+": "+sum
 						}
