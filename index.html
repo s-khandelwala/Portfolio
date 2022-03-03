@@ -452,14 +452,14 @@
 						function Check()
 						{
 							z=false
-							var x=document.getElementById("n").value
+							var l=document.getElementById("n").value
 							if (x!=2)
 							{	
-								for (a=2; a<=x; a++)
+								for (a=2; a<=l; a++)
 								{
-								     if (x%a==0)+(x!=a)
+								     if (l%a==0)+(l!=a)
 								     {
-									document.getElementById("p").innerHTML=x+" is not prime."
+									document.getElementById("p").innerHTML=l+" is not prime."
 									z=true
 									break
 								     }
@@ -467,7 +467,7 @@
 							}
 							if (z==false)
 							{
-								document.getElementById("p").innerHTML=x+" is prime."
+								document.getElementById("p").innerHTML=l+" is prime."
 							}
 						}
 					</script>
