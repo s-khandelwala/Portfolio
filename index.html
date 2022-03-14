@@ -48,7 +48,62 @@
       <h1 class="logo"><a>My Portfolio</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+	<div id="hh"></div><p>:</p>
+	<div id="mm"></div><p>:</p>
+	<div id="ss"></div>
+	 	<style>
+		div
+		{
+			border: 5px solid chartreuse;
+			background-color: darkcyan;
+			color: cyan;
+			width: 30px;
+			margin: 5px;
+			text-align: center;
+			float: left;
+		}
+		p
+		{
+			float: left;
+			font-size: larger;
+			margin-top: 5px;
+		}
+	</style>
+	<script>
+		function rclock()
+		{
+			var hh=new Date().getHours();
+			var mm=new Date().getMinutes();
+			var ss=new Date().getSeconds();
+			if (hh>12)
+			{
+				hh=hh-12
+			}
+			if (hh<10) 
+			{
+				hh="0"+hh
+			}
 
+			if (mm<10) 
+			{
+				mm="0"+mm
+			}
+			if (ss<10) 
+			{
+				ss="0"+ss
+			}
+			document.getElementById("hh").innerHTML=hh
+			document.getElementById("mm").innerHTML=mm
+			document.getElementById("ss").innerHTML=ss
+			refresh()
+		}
+		function refresh() 
+
+		{
+		var r=1000;
+		change=setTimeout("rclock()",r)      
+		}
+	</script>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
