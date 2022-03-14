@@ -52,10 +52,28 @@
 	<div id="hh"></div><p>:</p>
 	<div id="mm"></div><p>:</p>
 	<div id="ss"></div>
+	    <style>
+		#hh,#mm,#ss
+		{
+			border: 5px solid chartreuse;
+			background-color: darkcyan;
+			color: cyan;
+			width: 30px;
+			margin: 5px;
+			text-align: center;
+			float: left;
+		}
+		p
+		{
+			float: left;
+			font-size: larger;
+			margin-top: 5px;
+		}
+	</style>
 	<script>
 		function rclock()
 		{
-			document.onload="rclock"
+			document.onload="rclock()"
 			var hh=new Date().getHours();
 			var mm=new Date().getMinutes();
 			var ss=new Date().getSeconds();
