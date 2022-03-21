@@ -680,6 +680,23 @@
 					  </tr>
 				     </table>
 				</li>
+				<li>
+					<label for="number">Enter a number:</label>
+					<input type="number" id="number">
+					<button onclick="Fact()">Click Me</button>
+					<p id="paragraph"></p>
+					function Fact() 
+					{
+						var x=Math.round(parseFloat(document.getElementById("number").value))
+						document.getElementById("n").value=x
+						var fact=1
+						for (n=1; n<=x; n++)
+						{
+							fact*=n
+						}
+						document.getElementById("paragraph").innerHTML="The factorial of "+x+" is equal to "+fact
+					}
+				</li>
 			</ul>
                </div>
              </div>
