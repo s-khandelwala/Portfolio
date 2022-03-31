@@ -699,6 +699,86 @@
 					}
 					</script>
 				</li>
+				<li>
+					<canvas id="canvas" height="650" width="1000" style="border: 7.5px groove cyan; background-color: antiquewhite"></canvas>
+				<script>
+					var can=document.getElementById("canvas")
+					var p=can.getContext("2d")
+					function circle(x,y,rad,stang,endang,col) 
+					  {
+					       p.beginPath()
+					       p.arc(x,y,rad,stang,endang)
+					       p.fillStyle=col
+					       p.fill()
+					       p.stroke()
+					  }
+					  // Happy face
+					  // Outer Circle
+					  x=200
+					  y=200
+					  stang=0
+					  endang=Math.PI
+					  for(i=1;i<=2;i++)
+					  {
+					       circle(x,200,100,0,2*Math.PI,"yellow")
+					       // Smile
+					       circle(x,y,50,stang,endang)
+					       // Right Eye Socket
+					       circle(x-50,150,10,0,2*Math.PI,"white")
+					       // Left Eye Socket
+					       circle(x+50,150,10,0,2*Math.PI,"white")
+					       // Right Eye Pupil
+					       circle(x-50,150,3,0,2*Math.PI,"black")
+					       // Left Eye Pupil
+					       circle(x+50,150,3,0,2*Math.PI,"black")
+					       x+=350
+					       y+=50
+					       stang+=Math.PI
+					       endang-=Math.PI
+					  }
+					  //Text for happy face
+					  p.fillText("Happy Face",180,330)
+					  // Text for sad face
+					  p.fillText("Sad Face",530,330)
+				</script>
+				</li>
+				<li>
+					<canvas id="canvas" height="650" width="1000" style="border: 7.5px groove cyan; background-color: antiquewhite"></canvas> 
+					<script>
+						  var can=document.getElementById("canvas")
+						  var pen=can.getContext("2d")
+						  function circle(x,y,rad,stang,endang,col) 
+						  {
+						       pen.beginPath()
+						       pen.arc(x,y,rad,stang,endang)
+						       pen.fillStyle=col
+						       pen.fill()
+						       pen.stroke()
+						  }
+						  // Right ear Outline
+						  circle(425,250,50,0,2*Math.PI)
+						  // Left Ear Outline
+						  circle(575,250,50,0,2*Math.PI)
+						  // Inside of Right  Ear
+						  circle(440,265,40,0,2*Math.PI,"white")
+						  // Inside of Left  Ear
+						  circle(560,265,40,0,2*Math.PI)
+						  // Outer Circle
+						  circle(500,325,100,0,2*Math.PI)
+						  // Smile
+						  circle(500,350,50,0,Math.PI)
+						  // Right Eye Outline
+						  circle(450,300,20,0,2*Math.PI,"black")
+						  // Left Eye outline
+						  circle(550,300,20,0,2*Math.PI)
+						  // Right Eye Pupil
+						  circle(455,305,10,0,2*Math.PI,"white")
+						  // Left Eye Pupil
+						  circle(555,305,10,0,2*Math.PI)
+						  pen.fillStyle="black"
+						  pen.fillText("Mickey Face",470,460)
+					</script>
+				</li>
 			</ul>
                </div>
              </div>
