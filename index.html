@@ -780,18 +780,18 @@
 					</script>
 				</li>
 				<li>
-					<h1>
+					<h1 id="0h1">
 						<a class="one">Surprise</a> <br>
 						<a class="two">Surprise</a> <br>
 						<a class="three">Surprise</a>
 					</h1>
-					<div>
+					<div id="div">
 						You have a Surprise locked here... <br><br><br>
 						Hover over me to unlock your Surprise
-						<img src="Imagine Dragons.jpg" alt="A picture of the Imagine Dragons">
+						<img id="Imagine_Dragons" src="Imagine Dragons.jpg" alt="A picture of the Imagine Dragons">
 					 </div>
 					 <style>
-						  img
+						  #Imagine_Dragons
 						  {
 						       display: none;
 						       margin-left: 445px;
@@ -800,12 +800,12 @@
 						       padding: 20px;
 						       box-shadow: 6px 6px 6px rgb(47, 46, 46);
 						  }
-						  h1
+						  #0h1
 						  {
 						       text-align: center;
 						       cursor: progress;
 						  }
-						  div
+						  #div
 						  {
 						       font-family: Consolas;
 						       font-size: xx-large;
@@ -813,7 +813,7 @@
 						       display: block;
 						       color: rgb(25, 142, 192);
 						  }
-						  div:hover img {display: block;}
+						  #div:hover img {display: block;}
 						  a:visited {color: green}
 						  a.one:hover {color: chocolate}
 						  a.two:hover {font-size: 250%; color: rgb(131, 188, 189);}
@@ -821,7 +821,7 @@
 					     </style>
 				</li>
 				<li>
-					<h1>Slideshow</h1>
+					<h1 id="Slideh1">Slideshow</h1>
 					<div class="slides">
 						<img src="T-shirt.jpg" alt="Slide 1">
 						<img src="red apple.jpeg" alt="Slide 2">
@@ -830,7 +830,7 @@
 						<img src="colorless apple.jpg" alt="Slide 5">
 					</div>
 					<style>
-						h1
+						#Slideh1
 						{
 							text-align: center;
 							font-family: Consolas;
@@ -863,25 +863,6 @@
 						.slides img:nth-child(5) {animation-delay: 20s;}
 					</style>
 				</li>
-				<li>
-					<canvas id="canvas" height="650" width="1500" style="border: 7.5px groove cyan; background-color: green"></canvas>
-					<script>
-						var can=document.getElementById("canvas")
-						var p=can.getContext("2d")
-						var img=new Image()
-						img.onload=start
-						img.onerror=function(){alert(img.src+" failing to load")}
-						img.src="greeting.png"
-						function start() 
-						{
-							p.drawImage(img,700,100,600,400)
-						}
-						p.font="30px Brush Script MT"
-						p.fillText("Hello, hope to see you soon! I'm good, but how are you doing?",50,200)
-						p.fillText("Wish you a great year ahead and hope for no unfortune to strike.",50,300)
-					</script>
-				</li>
-			</ul>
                </div>
              </div>
            </div>
