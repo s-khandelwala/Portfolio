@@ -779,6 +779,108 @@
 						  pen.fillText("Mickey Face",470,460)
 					</script>
 				</li>
+				<li>
+					<h1>
+						<a class="one">Surprise</a> <br>
+						<a class="two">Surprise</a> <br>
+						<a class="three">Surprise</a>
+					</h1>
+					<div>
+						You have a Surprise locked here... <br><br><br>
+						Hover over me to unlock your Surprise
+						<img src="Imagine Dragons.jpg" alt="A picture of the Imagine Dragons">
+					 </div>
+					 <style>
+						  img
+						  {
+						       display: none;
+						       margin-left: 445px;
+						       width: 600px;
+						       background-color: azure;
+						       padding: 20px;
+						       box-shadow: 6px 6px 6px rgb(47, 46, 46);
+						  }
+						  h1
+						  {
+						       text-align: center;
+						       cursor: progress;
+						  }
+						  div
+						  {
+						       font-family: Consolas;
+						       font-size: xx-large;
+						       text-align: center;
+						       display: block;
+						       color: rgb(25, 142, 192);
+						  }
+						  div:hover img {display: block;}
+						  a:visited {color: green}
+						  a.one:hover {color: chocolate}
+						  a.two:hover {font-size: 250%; color: rgb(131, 188, 189);}
+						  a.three:hover {font-size: larger; color: purple}
+					     </style>
+				</li>
+				<li>
+					<h1>Slideshow</h1>
+					<div class="slides">
+						<img src="T-shirt.jpg" alt="Slide 1">
+						<img src="red apple.jpeg" alt="Slide 2">
+						<img src="greeting.png" alt="Slide 3">
+						<img src="green apple.jpg" alt="Slide 4">
+						<img src="colorless apple.jpg" alt="Slide 5">
+					</div>
+					<style>
+						h1
+						{
+							text-align: center;
+							font-family: Consolas;
+							color: blue;
+						}
+						.slides
+						{
+							width: 600px;
+							height: 600px;
+							overflow: hidden;
+							float: center;
+							margin: auto;
+						}
+						.slides img
+						{
+							position: absolute;
+							width: 600px;
+							height: auto;
+							border: 2px solid blue;
+							opacity: 0;
+							animation: slides 25s infinite;
+						}
+						@keyframes slides{  25%  {opacity:1;}
+										40%  {opacity:0;}
+									}
+						.slides img:nth-child(1) {animation-delay: 0s;}
+						.slides img:nth-child(2) {animation-delay: 5s;}
+						.slides img:nth-child(3) {animation-delay: 10s;}
+						.slides img:nth-child(4) {animation-delay: 15s;}
+						.slides img:nth-child(5) {animation-delay: 20s;}
+					</style>
+				</li>
+				<li>
+					<canvas id="canvas" height="650" width="1500" style="border: 7.5px groove cyan; background-color: green"></canvas>
+					<script>
+						var can=document.getElementById("canvas")
+						var p=can.getContext("2d")
+						var img=new Image()
+						img.onload=start
+						img.onerror=function(){alert(img.src+" failing to load")}
+						img.src="greeting.png"
+						function start() 
+						{
+							p.drawImage(img,700,100,600,400)
+						}
+						p.font="30px Brush Script MT"
+						p.fillText("Hello, hope to see you soon! I'm good, but how are you doing?",50,200)
+						p.fillText("Wish you a great year ahead and hope for no unfortune to strike.",50,300)
+					</script>
+				</li>
 			</ul>
                </div>
              </div>
