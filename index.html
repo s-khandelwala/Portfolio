@@ -531,38 +531,7 @@
 						</script>
 				</li>
 				<li>
-					<h1>Checking if a number is prime or not</h1>
-					<label for="n">Enter a number: </label>
-					<input type="text" id="n">
-					<button onclick="Check()">Check</button>
-					<p id="p"></p>
-					<script>
-						function Check()
-						{
-							var l=document.getElementById("n").value
-							z=false
-							if (l==1)
-							{
-								z=true
-							}
-							if (l!=2)
-							{	
-								for (a=2; a<l; a++)
-								{
-								     if (l%a==0)
-								     {
-									document.getElementById("p").innerHTML=l+" is not prime."
-									z=true
-									break
-								     }
-								}
-							}
-							if (z==false)
-							{
-								document.getElementById("p").innerHTML=l+" is prime."
-							}
-						}
-					</script>
+					
 				</li>
 				<li>
 					<h1>Checking for leap year</h1>
@@ -598,7 +567,7 @@
 							else
 							{
 								document.getElementById("answer2").value=" Not a Leap Year"
-			}
+							}
 						}
 					</script>
 				</li>
@@ -791,17 +760,10 @@
 						<img id="Imagine_Dragons" src="Imagine Dragons.jpg" alt="A picture of the Imagine Dragons">
 					 </div>
 					 <style>
-						 #one
-						 {text-align:center}
-						 #two
-						 {text-align:center}
-						 #three
-						 {text-align:center}
 						  #Imagine_Dragons
 						  {
 						       display: none;
 						       margin-left: 600px;
-						       width: 600px;
 						       background-color: azure;
 						       padding: 20px;
 						       box-shadow: 6px 6px 6px rgb(47, 46, 46);
