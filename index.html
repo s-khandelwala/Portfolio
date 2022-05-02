@@ -650,6 +650,7 @@
 				     </table>
 				</li>
 				<li>
+					<h1>Finding factorial of a number</h1>
 					<label for="number">Enter a number:</label>
 					<input type="number" id="number">
 					<button onclick="Fact()">Click Me</button>
@@ -660,9 +661,9 @@
 						var x=Math.round(parseFloat(document.getElementById("number").value))
 						document.getElementById("n").value=x
 						var fact=1
-						for (n=1; n<=x; n++)
+						for (x=1; n<=x; n++)
 						{
-							fact*=n
+							fact*=x
 						}
 						document.getElementById("paragraph").innerHTML="The factorial of "+x+" is equal to "+fact
 					}
